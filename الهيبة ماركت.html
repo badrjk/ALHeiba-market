@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost/login-test/index2.html -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" type="image/x-icon" href="./الهيبة ماركت_files/heiba.logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./الهيبة ماركت_files/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>الهيبة ماركت</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f8f8;
+      color: #000;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: slideDown 1s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #home{
+      border-bottom: 2px solid white;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem;
+      transition: border 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .l{
+      scale: 0.7;
+      padding: 4px;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #a5d6a7, #66bb6a);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: black;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 3px 1px rgb(102, 102, 102);
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .logo {
+        margin:0px auto;
+      }
+
+      nav {
+        margin: 0px auto;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .hero {
+        padding: 2rem 1rem;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./الهيبة ماركت_files/heiba.logo.png" alt="الهيبة ماركت" class="logo">
+    <nav>
+      <a id="home" href="http://localhost/login-test/index2.html#">الرئيسية</a>
+      <a href="http://localhost/login-test/product.php">المنتجات</a>
+      <a href="http://localhost/login-test/index2.html#" onclick="ShowInfo()">عنا</a>
+      <a href="http://localhost/login-test/index3.html">تواصل معنا</a>
+      <a class="l" href="http://localhost/login-test/index-register.html"> <i class="fa-solid fa-user"></i>انشاء حساب</a>
+      <a class="l" href="http://localhost/login-test/login.html"> <i class="fa-solid fa-user"></i> سجل دخول</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>مرحبا بكم في الهيبة ماركت</h1>
+    <p>كل احتياجاتك من مكان واحد!</p>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <h2>معلبات</h2>
+      <p>أفضل أنواع المعلبات المستوردة والمحلية.</p>
+    </div>
+    <div class="product">
+      <h2>مشروبات</h2>
+      <p>كل أنواع العصائر والمياه والمشروبات الغازية.</p>
+    </div>
+    <div class="product">
+      <h2>حلويات</h2>
+      <p>حلويات شرقية وغربية لجميع الأذواق.</p>
+    </div>
+    <div class="product">
+      <h2>منتجات ألبان</h2>
+      <p>لبن، جبن، زبادي والمزيد.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 الهيبة ماركت - جميع الحقوق محفوظة
+  </footer>
+
+
+<script>
+  function ShowInfo() {
+    alert("المزيد من المعلومات قريبا");
+  }
+</script>
+
+
+</body></html>
